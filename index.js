@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const mongodb = require('mongodb')
 const mongoClient =  mongodb.MongoClient;
-const url = 'mongodb://localhost:27017/';
+const url = 'mongodb+srv://todo:todoapp@cluster0.pdhym.mongodb.net?retryWrites=true&w=majority';
 app.use(express.json());
 
 const Port = process.env.PORT || 3000;
