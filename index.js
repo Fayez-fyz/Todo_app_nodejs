@@ -6,6 +6,7 @@ const mongoClient =  mongodb.MongoClient;
 const url = 'mongodb://localhost:27017/';
 app.use(express.json());
 
+const Port = process.env.PORT || 3000;
 app.use(
   cors({
     origin: "*",
@@ -97,6 +98,6 @@ app.delete("/delete-task/:id",async function (req, res) {
 }
 });
 
-app.listen(3000, function () {
-  console.log("Server is started on port 3000");
+app.listen(Port, function () {
+  console.log(`Server is started on port ${Port}`);
 });
